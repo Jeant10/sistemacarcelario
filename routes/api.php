@@ -23,6 +23,7 @@ Route::prefix('v1')->group(function ()
                 Route::get('/', 'show')->name('profile');
                 Route::post('/', 'store')->name('profile.store');
             });
+            Route::post('/avatar', [AvatarController::class, 'store'])->name('profile.avatar');
         });
     });
 });
