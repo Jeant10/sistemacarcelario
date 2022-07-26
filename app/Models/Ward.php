@@ -9,8 +9,6 @@ class Ward extends Model
 {
     use HasFactory;
 
-    use HasFactory;
-
     // Relación de uno a muchos
     // Un pabellón puede tener muchas cárceles
     public function jails()
