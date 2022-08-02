@@ -27,7 +27,7 @@ class ImageHelper
         }
 
          // Se retorna la ubicación de la imagen
-        return $uploaded_image_path;
+         return $uploaded_image_path;
     }
 }
 
