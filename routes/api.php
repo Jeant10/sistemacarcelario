@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Account\ProfileController;
 use App\Http\Controllers\Users\DirectorController;
+use App\Http\Controllers\Account\AvatarController;
 use Illuminate\Support\Facades\Route;
 
 // Se hace uso de grupo de rutas
