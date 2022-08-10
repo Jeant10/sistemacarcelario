@@ -9,6 +9,7 @@ use App\Http\Controllers\Users\GuardController;
 use App\Http\Controllers\Users\PrisonerController;
 use App\Http\Controllers\Spaces\JailController;
 use App\Http\Controllers\Spaces\WardController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 // Se hace uso de grupo de rutas
@@ -98,6 +99,16 @@ Route::prefix('v1')->group(function ()
             });
         });
 
+        Route::prefix('report')->group(function () {
+            Route::controller(ReportController::class)->group(function ()
+            {
+                Route::get('/', 'index');
+                Route::post('/create', 'store');
+                Route::get('/{report}', 'show');
+                Route::post('/{report}/update', 'update');
+                Route::get('/{report}/destroy', 'destroy');
+            });
+        });
 
     });
 });
